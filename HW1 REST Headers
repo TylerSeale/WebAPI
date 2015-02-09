@@ -1,0 +1,107 @@
+Tyler Seale - HW1 REST Headers
+===============================
+===============================
+
+Request headers:
+
+- No headers shown, but there are contents in Raw
+
+1) GET https://www.googleapis.com/books/v1/volumes?q=turing HTTP/1.1
+
+GET does not modify, create, or delete anything. GET only requests information. The URL is where we define the location and query parameters. The HTTP/1.1 is the protocol and protocol version
+
+
+2) Accept-Encoding: gzip,deflate
+
+This shows the excepted compression scheme
+
+
+3) Host: www.googleapis.com
+
+Name of the domain we are reaching out to
+
+
+4) Connection: Keep-Alive
+
+Shows the connection used. Keep-Alive means a single connection for multiple requests/responses.
+
+
+5) User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+shows the client software used for the requests.
+
+
+===================================================================================
+
+
+Response headers / Values:
+
+1) ETag    "_rmWcTkH-s1QFjg9mC3Xel0FZSQ/gJIX7X5fuhQunJhy7nw4svzBJks"
+
+This is one of the ways http requests handle web cache validation. If the content has not changed, the value will be the same and the full response will not be resent.
+
+
+2) Content-Length   26982
+
+This is the number of bytes in the response
+
+
+3) #status#    HTTP/1.1 200 OK
+
+Tells the protocol/version, error code, and error code message
+
+
+4) X-XSS-Protection    1; mode=block
+
+Monitors if any of the suspicious parameters that the browser sends to a website come back in the response decoded. It prevents script injection if the mode is set to block, which in this case it is.
+
+
+5) Expires     Mon, 09 Feb 2015 03:52:05 GMT
+
+The date of which the response is considered stale. In an instance where the local machine needs to attempt to send a request again, it will not do so until the date listed.
+
+
+6) Alternate-Protocol     443:quic,p=0.02
+
+Form: Alternate-Protocol   <port>:<protocol>
+This requests is for future http requests
+
+
+7) Server     GSE
+
+The name of the server
+
+
+8) X-Content-Type-Options     nosniff
+
+Prevents from MIME-sniffing a response from the content type
+
+
+9) Cache-Control      private, max-age=0, must-revalidate, no-transform
+
+tells us about what is cached. This cannot be cached at all and must be re validated each time.
+
+
+10) X-Frame-Options     SAMEORIGIN
+
+No rendering if there is an origin mismatch
+
+
+11) Vary     Origin
+
+response based on the Origin header value
+
+
+12) Vary     X-Origin
+
+response based on the X-Origin heaver value
+
+
+13) Date     Mon, 09 Feb 2015 03:52:05 GMT
+
+Date and time the message was sent
+
+
+14) Content-Type     application/json; charset=UTF-8
+
+JSON format accepts UTF-8 characters

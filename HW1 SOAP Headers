@@ -1,0 +1,101 @@
+Tyler Seale - HW1 SOAP Headers
+===============================
+===============================
+
+
+Request Headers:
+- No headers shown, but there are contents in Raw
+
+1) POST http://www.webservicex.net/geoipservice.asmx HTTP/1.1
+
+POST is requesting data from the website ussing hte http protocol version 1.1
+
+
+2) Accept-Encoding: gzip,deflate
+
+This shows the excepted compression scheme
+
+
+3) Content-Type: text/xml;charset=UTF-8
+
+Content is in xml format with UTF-8 characters
+
+
+4) SOAPAction: "http://www.webservicex.net/GetGeoIP"
+
+The intent of the SOAP request
+
+
+5) Content-Length: 317
+
+the byte size of the request
+
+
+6) Host: www.webservicex.net
+
+Name of the domain we are reaching out to
+
+
+7) Connection: Keep-Alive
+
+Shows the connection used. Keep-Alive means a single connection for multiple requests/responses.
+
+
+8) User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+shows the client software used for the requests.
+
+
+===================================================================================
+
+
+Response Headers:
+
+1) X-AspNet-Version    4.0.30319
+
+The version of X-AspNet
+
+
+2) Vary    Accept-Encoding
+
+Tells the proxy to accept encoding for future requests, determining whether or not the cached response can be re-used.
+
+
+3) Date    Mon, 09 Feb 2015 06:53:02 GMT
+
+The date the message was sent
+
+
+4) Content-Length     403
+
+The byte size of the request
+
+
+5) #status#    HTTP/1.1 200 OK
+
+Tells the protocol/version, error code, and error code message
+
+
+6) Content-Encoding    gzip
+
+How the content is encoded (gzip)
+
+
+7) Content-Type    text/xml; charset=utf-8
+
+Content is in xml format with UTF-8 characters
+
+
+8) Server      Microsoft-IIS/7.0
+
+The name of the server
+
+
+9) X-Powered-By     ASP.NET
+
+The technology supporting the web application
+
+
+10) Cache-Control      private, max-age=0
+
+tells us about what is cached. This cannot be cached at all and must be re validated each time.
